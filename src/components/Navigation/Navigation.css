@@ -1,0 +1,23 @@
+.custom-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20
+}
+
+.nav-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+}
+
+.nav-button button {
+  margin-left: auto;
+}

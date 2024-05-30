@@ -1,0 +1,36 @@
+.custom-form {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  margin: 20px auto;
+  max-width: 400px;
+}
+
+.form-title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #008CBA;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #005f73;
+}
+
+.submit-button:active {
+  transform: scale(0.98);
+}
