@@ -1,19 +1,19 @@
 import React from 'react';
 import { BehaviorSubject } from 'rxjs';
 import publicRequest from './publicRequest';
-import { redirect } from 'react-router-native';
+
 
 
 const userSubject = new BehaviorSubject(null);
 let refreshTokenTimeout;
 
 
-export function register({name, email}) {
-  return publicRequest.post('/auth/login', { name, email })
+export function register({name, email, password}) {
+  return publicRequest.post('/auth/register', { name, email, password })
 }
 
-export function login({name, email}) {
-  return publicRequest.post('/auth/login', { name, email })
+export function login({email, password}) {
+  return publicRequest.post('/auth/login', { email, password })
 }
 
 export function logout({name, email}) {

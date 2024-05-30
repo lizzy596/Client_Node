@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import './Button.css';
 
 const Button = ({
+  onClick,
   text,
   backgroundColor = '#008CBA', // Default background color
   textColor = '#ffffff',        // Default text color
@@ -17,7 +18,7 @@ const Button = ({
   };
 
   return (
-    <button className="custom-button" style={buttonStyle}>
+    <button onClick={onClick} className="custom-button" style={buttonStyle}>
       {text}
     </button>
   );

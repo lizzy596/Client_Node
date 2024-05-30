@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Button } from '../Button';
+import { useNavigate } from "react-router-dom";
 import './Navigation.css';
 
 const Navigation = ({
@@ -10,6 +11,7 @@ const Navigation = ({
   height = '60px',           // Default height
   width = '100%'             // Default width
 }) => {
+  const navigate = useNavigate();
   const navStyle = {
     backgroundColor: backgroundColor,
     color: textColor,
@@ -17,11 +19,21 @@ const Navigation = ({
     width: width
   };
 
+const goRegister = () => {
+  navigate("/register");
+}
+
+const goLogin = () => {
+  navigate("/login");
+}
+
+
   return (
     <nav className="custom-nav" style={navStyle}>
       <div className="nav-title">{navTitle}</div>
       <div className="nav-button">
-        <Button text="Sign In" backgroundColor="#007BFF" textColor="#fff" height="40px" width="100px" />
+      <Button text="Register" onClick={goRegister} backgroundColor="#007BFF" textColor="#fff" height="40px" width="100px" />
+      <Button text="Login" onClick={goLogin}  backgroundColor="#007BFF" textColor="#fff" height="40px" width="100px" />
       </div>
     </nav>
   );
