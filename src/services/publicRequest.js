@@ -5,6 +5,7 @@ import axios from 'axios';
 
 const publicRequest = axios.create({
   baseURL: config.apiServerUrlDevelopment
+
 });
 
 export default publicRequest;

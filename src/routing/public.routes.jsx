@@ -7,7 +7,7 @@ import config from "../../config.json"
 
 const publicRoutes = [
   {
-    path: '/home',
+    path: '/',
     exact: true,
     layout: DefaultLayout,
     element: () => <Navigate to={config.homeUrl} />,
