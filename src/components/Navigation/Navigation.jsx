@@ -32,8 +32,8 @@ const goLogin = () => {
     <nav className="custom-nav" style={navStyle}>
       <div className="nav-title">{navTitle}</div>
       <div className="nav-button">
-      <Button text="Register" onClick={goRegister} backgroundColor="#007BFF" textColor="#fff" height="40px" width="100px" />
-      <Button text="Login" onClick={goLogin}  backgroundColor="#007BFF" textColor="#fff" height="40px" width="100px" />
+      <Button text="Login" onClick={goLogin} backgroundColor="#007BFF" textColor="#fff" height="40px" width="100px" />
+      <Button text="Logout" onClick={goLogin}  backgroundColor="#007BFF" textColor="#fff" height="40px" width="100px" />
       </div>
     </nav>
   );

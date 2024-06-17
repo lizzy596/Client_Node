@@ -3,9 +3,11 @@ import * as config from  '../../config.json';
 import axios from 'axios';
 
 
-const publicRequest = axios.create({
-  baseURL: config.apiServerUrlDevelopment
+const basicCaller = axios.create({
+  baseURL: config.apiServerUrlDevelopment,
+  withCredentials: true,
+
 
 });
 
-export default publicRequest;
+export default basicCaller;

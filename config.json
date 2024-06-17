@@ -3,7 +3,7 @@
   "apiUrl": "/v1",
   "withApiServer": true,
   "apiServerUrlProduction": "https://liftx.moontower.online",
-  "apiServerUrlDevelopment": "http://localhost:3010/v1",
+  "apiServerUrlDevelopment": "http://localhost:4000/v1",
   "env": "dev",
   "homeUrl": "/home"
 }

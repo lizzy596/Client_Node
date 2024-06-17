@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import authService from '../../services/auth.service';
 import { FormInput } from '../../components/Form/FormInput';
 import './LoginForm.css';
+import { useNavigate } from "react-router-dom";
 
 const LoginForm = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -17,8 +19,8 @@ const LoginForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const user = await authService.login({ email, password });
-    console.log('user', user)
+    const response = await authService.login({ email, password });
+    navigate("/tasks");
   };
 
   return (
