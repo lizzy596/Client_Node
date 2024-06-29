@@ -1,12 +1,13 @@
 import React from 'react';
-import publicRequest from './basicCaller';
+import authCaller from './authCaller';
+import httpCaller from './httpCaller';
 
 
 
 
 
 export function getTasks() {
-  return publicRequest.get('/tasks')
+  return httpCaller.get('/tasks')
 }
 
 

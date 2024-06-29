@@ -20,7 +20,8 @@ const LoginForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const response = await authService.login({ email, password });
-    navigate("/tasks");
+    console.log('response', response)
+    navigate("/home");
   };
 
   return (

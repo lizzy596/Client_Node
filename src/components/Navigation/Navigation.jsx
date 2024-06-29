@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Button } from '../Button';
 import { useNavigate } from "react-router-dom";
+import { useUserAuth} from '../../services/auth.service';
+import authService from '../../services/auth.service';
 import './Navigation.css';
 
 const Navigation = ({
@@ -12,6 +14,7 @@ const Navigation = ({
   width = '100%'             // Default width
 }) => {
   const navigate = useNavigate();
+  const user = useUserAuth();
   const navStyle = {
     backgroundColor: backgroundColor,
     color: textColor,
@@ -32,8 +35,7 @@ const goLogin = () => {
     <nav className="custom-nav" style={navStyle}>
       <div className="nav-title">{navTitle}</div>
       <div className="nav-button">
-      <Button text="Login" onClick={goLogin} backgroundColor="#007BFF" textColor="#fff" height="40px" width="100px" />
-      <Button text="Logout" onClick={goLogin}  backgroundColor="#007BFF" textColor="#fff" height="40px" width="100px" />
+      {user && <Button text="Logout" onClick={user? authService.logout : goLogin} backgroundColor="#007BFF" textColor="#fff" height="40px" width="100px" />}
       </div>
     </nav>
   );

@@ -3,11 +3,11 @@ import * as config from  '../../config.json';
 import axios from 'axios';
 
 
-const basicCaller = axios.create({
+const httpCaller = axios.create({
   baseURL: config.apiServerUrlDevelopment,
   withCredentials: true,
 
 
 });
 
-export default basicCaller;
+export default httpCaller;

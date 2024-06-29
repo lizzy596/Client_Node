@@ -1,9 +1,7 @@
 import { Navigate } from 'react-router-dom';
 import DefaultLayout from '../layouts/Default.layout';
 import { LoginPage } from '../pages/LoginPage';
-import { TaskPage } from '../pages/TaskPage';
 import { RegistrationPage } from '../pages/RegistrationPage';
-import { HomePage } from '../pages/HomePage';
 import config from "../../config.json"
 
 const publicRoutes = [
@@ -12,12 +10,6 @@ const publicRoutes = [
     exact: true,
     layout: DefaultLayout,
     element: () => <Navigate to={config.homeUrl} />,
-  },
-  {
-    path: '/home',
-    exact: true,
-    layout: DefaultLayout,
-    element: HomePage,
   },
   {
     path: '/login',
@@ -31,12 +23,7 @@ const publicRoutes = [
     layout: DefaultLayout,
     element: RegistrationPage,
   },
-  {
-    path: '/tasks',
-    exact: true,
-    layout: DefaultLayout,
-    element: TaskPage,
-  },
+ 
 ];
 
 export default publicRoutes;

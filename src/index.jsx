@@ -4,12 +4,12 @@ import { BrowserRouter } from 'react-router-dom';
 import App from './App.jsx'
 import './index.css'
 //import './assets/styles/main.scss';
-//import authService from './services/auth.service';
+import authService from './services/auth.service';
 
 
 
 const Index = () => {
-  //authService.useUserAuth();
+  authService.useUserAuth();
 
   return (
     <BrowserRouter>
@@ -28,7 +28,7 @@ async function startApp() {
 
 if (import.meta.env.VITE_WITH_SERVER) {
   console.log('Running with api server');
-  //authService.refreshToken().finally(startApp);
+  authService.refreshToken().finally(startApp);
 } else {
   console.log('No api server');
   startApp();
